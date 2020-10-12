@@ -1,6 +1,4 @@
 #Manipulando Cadeia de Textos
-#        012345678901234567890
-frase = 'Curso em Vídeo Python'
 
 '''
 #FATIAMENTO (começo, fim, pulando)
