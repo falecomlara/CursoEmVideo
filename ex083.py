@@ -8,9 +8,26 @@ expressao é invalida
 """
 # usando uma lista para validar se é válido ou não
 
-expressao = []
-c=0
+#Solução do Curso
+expressao = str(input('Digite uma expressão: '))
+pilha =[]
+for simbolo in expressao:
+    if simbolo == '(':
+        pilha.append('(')
+    elif simbolo == ')':
+        if len(pilha)>0:
+            pilha.pop() #apaga o último dígito
+        else:
+            pilha.append(')')
+            break
+if len(pilha) == 0:
+    print('Sua expressão está válida')
+else:
+    print('Sua expressão está inválida')
 
+
+""" Minha resolução:
+expressao = []
 frase = str(input('Digite uma expressão matemática: '))
 qtde = len(frase)
 for c in range(qtde):
@@ -18,12 +35,9 @@ for c in range(qtde):
 print(frase)
 parenteses_e = expressao.count('(')
 parenteses_d = expressao.count(')')
-chaves_d = expressao.count('{')
-chaves_e = expressao.count('}')
-colchetes_d = expressao.count('[')
-colchetes_e = expressao.count(']')
-total = parenteses_e+parenteses_d+chaves_d+chaves_e+colchetes_d+colchetes_e
+total = parenteses_e+parenteses_d
 if total % 2 != 0:
     print('Expressão inválida')
 else:
     print('Expressão correta')
+"""

@@ -1,6 +1,8 @@
 """ INTRODUÇÃO LISTAS (Elas são mutáveis)
 (TUPLAS), [LISTAS]
 """
+
+"""
 lanche = ['hamburguer', 'suco', 'pizza', 'pudim']
 print('lista:',lanche)
 lanche[3]='picolé'
@@ -47,25 +49,27 @@ else:
 print(f'Primeira ocorrência do 2, removido', num2)
 
 print('-=-'*20)
-
+"""
+# APRENDENDO USAR ENUMERATE
 valores = []
 valores.append(3)
 valores.append(5)
 valores.append(9)
 
-print(valores)
-for v in valores:
-    print(f'{v}...', end='')
-
-print(f'\n', '-=-'*20)
-
-for c, v in enumerate(valores):
+for c, v in enumerate(valores): #Ele retorna com o Indice e o Valor.
     print(f'Na posição {c} encontrei o valor {v}!')
 print('Cheguei no final da lista')
-
 print('-=-'*20)
 
 """
+print(valores)
+for v in valores:
+    print(f'{v}...', end='')
+print(f'\n', '-=-'*20)
+
+
+
+
 numeros = []
 for contador in range (0,5):
     numeros.append(int(input('Digite um valor: ')))
@@ -73,7 +77,7 @@ for contador in range (0,5):
 for c, v in enumerate(numeros):
     print(f'Na posição {c} entrou o valor {v}!')
 print('Fim da lista usando Input')
-"""
+
 
 a = [2,3,4,6]
 b = a
@@ -83,3 +87,4 @@ print(f'Lista B: {b}')
 print(f'Lista C na posição [2:] em diante: {c}')
 b[2] = 8
 print(f'Adiciona 8 na posição [2] {b} ')
+"""
