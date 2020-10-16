@@ -1,7 +1,7 @@
 # CursoEmVideo - Mundo1, Mundo2, Mundo3
 
-Este é o repositório onde armazeno, as minhas aulas, anotações e respostas, dos exercícios
-do curso de Python que realizei em 2020.
+Este é o repositório onde armazeno minhas aulas, anotações e respostas
+dos exercícios do curso de Python, que realizei em 2020.
 
 # INDEX
 
