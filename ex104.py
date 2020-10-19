@@ -11,19 +11,28 @@ leiaint(1)
 print(f'Você acabou de digitar o número {n}')
 """
 
-def funcao(n):
+def leiaInt(msg):
+    """
+    -> Esse é um parametro para validar se foi digitado um número inteiro
+    :param msg: deve ser um número inteiro. valores em branco não será considerado numérico
+    :return:    armazena o número e retorna no N
+    """
+    ok = False
+    valor = 0
     while True:
-        lista=(0,1,2,3,4,5,6,7,8)
-        if n not in lista:
-            print('ERRO! Digite um número inteiro válido')
-            n=int(input('Digite um número: '))
+        n = str(input(msg)) # o número será tratado como string, para usarmos o 'isnumeric()'
+        if n.isnumeric():   # aqui ele verifica se é uma string ou número
+            valor=int(n)    # em caso verdadeiro (numérico), muda para inteiro e coloca em 'valor'
+            ok = True       # coloca 'True' em 'ok'
         else:
-            print('saindo do laço')
+            print('\033[0;31mERRO! Digite um número inteiro válido.\033[m')
+        if ok:
             break
+    return valor
 
 
-x = int(input('Digite um número: '))
-funcao(x)
+#Programa Principal
+n = leiaInt('Digite um número: ')
 print(f'Você acabou de digitar o número {n}')
 
 #print(f'Resultado é {resultado}')

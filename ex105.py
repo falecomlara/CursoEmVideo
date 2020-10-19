@@ -8,14 +8,33 @@ e retornar um dicionario com:
 - a situacao
 """
 
-def nota(*n):
-    aluno = {"notas":""}
-    aluno["notas"]=n
-    print(aluno)
 
-    print(aluno, type(aluno))
-    print(len(aluno))
+def notas(*n, situacao=False):
+    """
+    ==> Cálculo de notas, dentro de uma função
+    :param n:        Entrada de notas escolares do tipo Float
+    :param situacao: Se 'True', retornará informações extras
+    :return:         O return armazena o resultado e retorna para o programa
+    """
+    r = dict()
+    r['total']=len(n)
+    r['maior']=max(n)
+    r['menor']=min(n)
+    r['media']=(sum(n)/len(n))
+    if situacao:
+        if r['media']>=6:
+            r['situacao']='Aprovado'
+        elif r['media']>=5:
+            r['situacao']='Recuperação'
+        else:
+            r['situacao']='Reprovado'
+    return r
+
 
 
 #PROGRAMA PRINCIPAL
-nota(5,4,6,2)
+resp=notas(5,4,6,8.5, situacao=False)
+print(resp)
+resp=notas(5,4,6,8.5, situacao=True)
+print(resp)
+
