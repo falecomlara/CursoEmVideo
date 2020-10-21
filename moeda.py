@@ -41,19 +41,19 @@ def titulo(msg):
 
 def resumo(num=0, taxaAumentar=10, taxaReduzir=5):
     """
-    ==> IMPRIME TABELA DE RESUMO
-    :param num: Preço do produto
-    :param taxaAumentar: Número inteiro para aumentar porcentagem
-    :param taxaReduzir:  Número inteiro para diminuir porcentagem
-    :return: 
-    """"""
-   titulo('RESUMO DO VALOR')
-   print(f'Preço analisado: \t\t{virgula(num)}')  # Aqui usei três tabulações
-   print(f'Dobro do preço: {dobro(num, True):>17}') # Aqui usei :>17 para direita
-   print(f'Metade do preço: \t\t{metade(num, True)}')
-   print(f'{taxaAumentar}% de aumento: \t\t{aumentar(num, taxaAumentar, True)}')
-   print(f'{taxaReduzir}% de redução: \t\t\t{diminuir(num, taxaReduzir, True)}')
-   print('-' * 32)
+    ==> Retorna tabela formatada
+    :param num: Preço (INT) a ser validado
+    :param taxaAumentar: Porcentagem (INT) que será aumentada
+    :param taxaReduzir:  Porcentagem (INT) que será diminuido
+    :return:
+    """
+    titulo('RESUMO DO VALOR')
+    print(f'Preço analisado: \t\t{virgula(num)}')  # Aqui usei três tabulações
+    print(f'Dobro do preço: {dobro(num, True):>17}') # Aqui usei :>17 para direita
+    print(f'Metade do preço: \t\t{metade(num, True)}')
+    print(f'{taxaAumentar}% de aumento: \t\t{aumentar(num, taxaAumentar, True)}')
+    print(f'{taxaReduzir}% de redução: \t\t\t{diminuir(num, taxaReduzir, True)}')
+    print('-' * 32)
 
 
 

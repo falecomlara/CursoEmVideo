@@ -1,7 +1,8 @@
-transportar todas as funcões, para o novo pacote
-dos exercícios 107 até o 110
-corrigindo se eu digitar vazio ou STR
+#transportar todas as funcões, para o novo pacote
+#dos exercícios 107 até o 110
+#corrigindo se eu digitar vazio ou STR
 
+import moeda
 
 # INICIO DO PROGRAMA
 p = float(input('Digite o preço: R$ '))
